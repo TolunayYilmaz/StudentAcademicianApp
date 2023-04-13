@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtBolumAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnkaydet = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -80,6 +83,11 @@
             this.btnkaydet.TabIndex = 0;
             this.btnkaydet.Text = "Kaydet";
             this.btnkaydet.UseVisualStyleBackColor = false;
+            this.btnkaydet.Click += new System.EventHandler(this.btnkaydet_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmDepartmans
             // 
@@ -96,6 +104,7 @@
             this.Text = "FrmDepartmans";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -106,5 +115,6 @@
         private System.Windows.Forms.TextBox txtBolumAdi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnkaydet;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

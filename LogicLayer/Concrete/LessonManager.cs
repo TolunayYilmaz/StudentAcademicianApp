@@ -10,11 +10,14 @@ namespace LogicLayer.Concrete
 {
     public class LessonManager
     {
-        //public List<Lesson> GetList()
-        //{
-        //    LessonDal lessonDal = new LessonDal();
-
-        //    return lessonDal.GetAll();
-        //}
+       
+        public List<Lesson> GetList()
+       
+        {
+       
+            Repository<Lesson> lessonDal = new Repository<Lesson>();
+            return lessonDal.GetAll();
+       
+        }
     }
 }

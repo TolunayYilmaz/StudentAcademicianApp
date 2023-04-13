@@ -8,6 +8,7 @@ namespace EntityLayer.Concrete
 {
     public class Note
     {
+
         public int Id { get; set; }
         public Nullable<int> Sinav1 { get; set; }
         public Nullable<int> Sinav2 { get; set; }
@@ -18,6 +19,9 @@ namespace EntityLayer.Concrete
         public Nullable<int> Proje { get; set; }
         public Nullable<int> Ders { get; set; }
         public Nullable<int> Ogrenci { get; set; }
-     
+        
+        public virtual Lesson Lessons { get; set; }
+        public virtual Student Students { get; set; }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,31 @@ namespace StudentAcademicianApp.Forms
         public FrmStudentPanel()
         {
             InitializeComponent();
+        }
+        NoteManager noteManager =new NoteManager();
+        private void FrmStudentPanel_Load(object sender, EventArgs e)
+        {
+            StudentNotes(1);
+        }
+        private void StudentNotes(int id)
+        {
+            var student = from x in noteManager.GetList()
+                          select new
+                          {
+                              x.Sinav1,
+                              x.Sinav2,
+                              x.Sinav3,
+                              x.Quiz1,
+                              x.Quiz2,
+                              x.Proje,
+                              x.Ortalama,
+                              x.Students.OgrAd,
+                              x.Lessons.DersAd,
+                              x.Ogrenci
+
+                          };
+            dataGridView1.DataSource = student.Where(y => y.Ogrenci == id).ToList();
+            dataGridView1.Columns["Ogrenci"].Visible = false;
         }
     }
 }

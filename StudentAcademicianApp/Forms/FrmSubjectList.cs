@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace StudentAcademicianApp.Forms
         public FrmSubjectList()
         {
             InitializeComponent();
+        }
+
+        private void FrmSubjectList_Load(object sender, EventArgs e)
+        {
+            LessonManager lessonManager = new LessonManager();
+            dataGridView1.DataSource= lessonManager.GetList();
+            dataGridView1.Columns["Id"].Visible = false;
         }
     }
 }

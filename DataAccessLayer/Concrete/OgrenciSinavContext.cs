@@ -24,11 +24,31 @@ namespace DataAccessLayer
             base.OnModelCreating(modelBuilder);
 
             // Student sınıfındaki OgrBolumId alanı ile Departmant sınıfındaki Id alanı arasında bir ilişki tanımlıyoruz.
-            modelBuilder.Entity<Student>()
-                .HasOptional(s => s.Departmant)
-                .WithMany(d => d.Students)
-                .HasForeignKey(s => s.OgrBolum);
-        }
+            //modelBuilder.Entity<Student>()
+            //    .HasOptional(s => s.Departmant)
+            //    .WithMany(d => d.Students)
+            //    .HasForeignKey(s => s.OgrBolum);
+            //modelBuilder.Entity<Note>()
+            //   .HasOptional(s => s.Student)
+            //   .WithMany(d => d.Notes)
+            //   .HasForeignKey(s => s.Ogrenci);
 
+            modelBuilder.Entity<Student>()
+           .HasOptional(s => s.Departmant)
+           .WithMany(d => d.Students)
+           .HasForeignKey(s => s.OgrBolum);
+
+
+            modelBuilder.Entity<Note>()
+                .HasOptional(s => s.Students)
+                .WithMany(d => d.Notes)
+                .HasForeignKey(s => s.Ogrenci);
+
+            modelBuilder.Entity<Note>()
+               .HasOptional(s => s.Lessons)
+               .WithMany(d => d.Notes)
+               .HasForeignKey(s => s.Ders);
+        }
+       
     }
 }

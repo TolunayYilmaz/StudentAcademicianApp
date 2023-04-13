@@ -312,6 +312,7 @@
             this.Name = "FrmStudentPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmStudentPanel";
+            this.Load += new System.EventHandler(this.FrmStudentPanel_Load);
             this.grpbox.ResumeLayout(false);
             this.grpbox.PerformLayout();
             this.groupBox2.ResumeLayout(false);

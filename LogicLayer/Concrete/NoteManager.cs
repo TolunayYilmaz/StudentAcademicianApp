@@ -10,11 +10,11 @@ namespace LogicLayer
 {
     public class NoteManager
     {
-        //public List<Note> GetList()
-        //{
-        //    NoteDal noteDAL = new NoteDal();
+       public List<Note> GetList()
+       {
+           Repository<Note> noteDAL = new  Repository<Note>();
 
-        //    return noteDAL.GetAll();
-        //}
+           return noteDAL.GetAll();
+       }
     }
 }
