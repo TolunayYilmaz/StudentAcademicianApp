@@ -12,7 +12,7 @@ namespace EntityLayer.Concrete
         public string AkademisyenAd { get; set; }
         public string AkademisyenSoyad { get; set; }
         public string AkademisyenUnvan { get; set; }
-        public string AkademisyenNumara { get; set; }
+        public int AkademisyenNumara { get; set; }
         public string AkademisyenSifre { get; set; }
     }
 }

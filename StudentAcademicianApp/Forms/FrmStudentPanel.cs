@@ -1,4 +1,4 @@
-﻿using LogicLayer;
+﻿using LogicLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,9 +18,11 @@ namespace StudentAcademicianApp.Forms
             InitializeComponent();
         }
         NoteManager noteManager =new NoteManager();
+        int studentId;
+        public int StudentId { set { studentId = value; } }
         private void FrmStudentPanel_Load(object sender, EventArgs e)
         {
-            StudentNotes(1);
+            StudentNotes(studentId);
         }
         private void StudentNotes(int id)
         {

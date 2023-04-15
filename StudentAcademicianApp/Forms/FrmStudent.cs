@@ -1,6 +1,6 @@
 ﻿using EntityLayer.Concrete;
-using LogicLayer;
 using LogicLayer.Concrete;
+using StudentAcademicianApp.Abstract;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +13,16 @@ using System.Windows.Forms;
 
 namespace StudentAcademicianApp.Forms
 {
-    public partial class FrmStudent : Form
+    public partial class FrmStudent : Form,IMap
     {
         public FrmStudent()
         {
             InitializeComponent();
         }
         StudentManager studentManager = new StudentManager();
+
+        public FrmMaps Map {  set { map = value; } }
+        private FrmMaps map;
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Student student = studentManager.GetStudent(int.Parse(txtId.Text));
@@ -33,7 +36,7 @@ namespace StudentAcademicianApp.Forms
             Student student = studentManager.GetStudent(int.Parse(txtId.Text));
             student.OgrAd = txtAdi.Text;
             student.OgrSoyad = txtSoyadi.Text;
-            student.OgrNumara = txtNumara.Text;
+            student.OgrNumara = int.Parse(txtNumara.Text);
             student.OgrSifre=txtSifre.Text;
             studentManager.StudentUpdate();
             List();
@@ -95,6 +98,18 @@ namespace StudentAcademicianApp.Forms
                                       student.Departmant.BolumAd
                                   };
             comboBoxBolum.DataSource= selectedColumnsCombobox.ToList();    
+        }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            BackMenu();
+
+        }
+
+        public void BackMenu()
+        {
+            map.Show();
+            this.Hide();
         }
     }
 }

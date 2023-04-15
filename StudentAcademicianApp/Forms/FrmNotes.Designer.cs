@@ -63,6 +63,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnHesapla = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnMainMenu = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -106,6 +107,7 @@
             this.btnAra.TabIndex = 34;
             this.btnAra.Text = "Ara";
             this.btnAra.UseVisualStyleBackColor = false;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // label13
             // 
@@ -138,6 +140,7 @@
             this.comboBoxDersSec.Name = "comboBoxDersSec";
             this.comboBoxDersSec.Size = new System.Drawing.Size(171, 26);
             this.comboBoxDersSec.TabIndex = 31;
+            this.comboBoxDersSec.SelectedIndexChanged += new System.EventHandler(this.comboBoxDersSec_SelectedIndexChanged);
             // 
             // txtOrtalama
             // 
@@ -173,6 +176,7 @@
             this.btnAdd.TabIndex = 28;
             this.btnAdd.Text = "Ekle";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtStudent
             // 
@@ -258,6 +262,7 @@
             this.btnUpdate.TabIndex = 23;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label10
             // 
@@ -403,6 +408,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(727, 453);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label2
             // 
@@ -449,9 +455,11 @@
             this.btnHesapla.TabIndex = 0;
             this.btnHesapla.Text = "Hesapla";
             this.btnHesapla.UseVisualStyleBackColor = false;
+            this.btnHesapla.Click += new System.EventHandler(this.btnHesapla_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnMainMenu);
             this.groupBox1.Controls.Add(this.txtOrtalama);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.btnAdd);
@@ -484,6 +492,21 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             // 
+            // btnMainMenu
+            // 
+            this.btnMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnMainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.btnMainMenu.ForeColor = System.Drawing.Color.White;
+            this.btnMainMenu.Location = new System.Drawing.Point(6, 530);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(126, 32);
+            this.btnMainMenu.TabIndex = 31;
+            this.btnMainMenu.Text = "Ana Sayfa";
+            this.btnMainMenu.UseVisualStyleBackColor = false;
+            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
+            // 
             // FrmNotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -499,6 +522,7 @@
             this.Name = "FrmNotes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNotes";
+            this.Load += new System.EventHandler(this.FrmNotes_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -546,5 +570,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHesapla;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnMainMenu;
     }
 }

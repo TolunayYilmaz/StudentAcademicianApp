@@ -19,6 +19,7 @@ namespace DataAccessLayer.Concrete
         }
         public int Delete(T parameter)
         {
+          
            objectDal.Remove(parameter);
            return context.SaveChanges();
            
@@ -46,5 +47,7 @@ namespace DataAccessLayer.Concrete
         {
             return context.SaveChanges();
         }
+        
+      
     }
 }

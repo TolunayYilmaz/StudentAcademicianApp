@@ -1,5 +1,6 @@
 ﻿using EntityLayer.Concrete;
 using LogicLayer.Concrete;
+using StudentAcademicianApp.Abstract;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ using System.Windows.Forms;
 
 namespace StudentAcademicianApp.Forms
 {
-    public partial class FrmDepartmans : Form
+    public partial class FrmDepartmans : Form,IMap
     {
         public FrmDepartmans()
         {
@@ -20,6 +21,12 @@ namespace StudentAcademicianApp.Forms
         }
 
         DepartmantManager departmantManager = new DepartmantManager();
+
+        public FrmMaps Map { set { map = value; } }
+
+        private FrmMaps map;
+
+
         private void btnkaydet_Click(object sender, EventArgs e)
         {
 
@@ -36,6 +43,20 @@ namespace StudentAcademicianApp.Forms
                
                 MessageBox.Show("Bölüm Kaydedildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            BackMenu();
+
+        }
+
+        public void BackMenu()
+        {
+         
+                map.Show();
+                this.Hide();
+            
         }
     }
 }

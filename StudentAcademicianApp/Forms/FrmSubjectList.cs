@@ -1,4 +1,5 @@
 ﻿using LogicLayer.Concrete;
+using StudentAcademicianApp.Abstract;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,8 +12,14 @@ using System.Windows.Forms;
 
 namespace StudentAcademicianApp.Forms
 {
-    public partial class FrmSubjectList : Form
+    public partial class FrmSubjectList : Form,IMap
     {
+        public FrmMaps Map { set { map = value; } }
+
+        private FrmMaps map;
+
+
+
         public FrmSubjectList()
         {
             InitializeComponent();
@@ -22,7 +29,19 @@ namespace StudentAcademicianApp.Forms
         {
             LessonManager lessonManager = new LessonManager();
             dataGridView1.DataSource= lessonManager.GetList();
-            dataGridView1.Columns["Id"].Visible = false;
+            dataGridView1.Columns["LessonId"].Visible = false;
+        }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            BackMenu();
+
+        }
+
+        public void BackMenu()
+        {
+            map.Show();
+            this.Hide();
         }
     }
 }

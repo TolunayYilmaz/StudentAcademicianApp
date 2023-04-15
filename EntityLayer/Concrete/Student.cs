@@ -8,15 +8,15 @@ namespace EntityLayer.Concrete
 {
     public class Student
     {
-        //public Student()
-        //{
-        //    this.Notes = new HashSet<Note>();
-        //}
+       public Student()
+       {
+           this.Notes = new HashSet<Note>();
+       }
 
         public int Id { get; set; }
         public string OgrAd { get; set; }
         public string OgrSoyad { get; set; }
-        public string OgrNumara { get; set; }
+        public int OgrNumara { get; set; }
         public string OgrSifre { get; set; }
         public string OgrMail { get; set; }
         public string OgrResim { get; set; }

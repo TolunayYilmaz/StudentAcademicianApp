@@ -14,7 +14,7 @@ namespace EntityLayer.Concrete
             this.Notes = new HashSet<Note>();
         }
         [Key]
-        public int Id { get; set; }
+        public int LessonId { get; set; }
         public string DersAd { get; set; }
         public virtual ICollection<Note> Notes { get; set; }
     }

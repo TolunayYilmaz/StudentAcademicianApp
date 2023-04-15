@@ -16,7 +16,7 @@ namespace StudentAcademicianApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.FrmDepartmans());
+            Application.Run(new Forms.FrmLogIn());
         }
     }
 }

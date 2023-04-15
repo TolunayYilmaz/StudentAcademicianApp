@@ -156,6 +156,7 @@
             this.pnlQuit.Name = "pnlQuit";
             this.pnlQuit.Size = new System.Drawing.Size(200, 119);
             this.pnlQuit.TabIndex = 16;
+            this.pnlQuit.Click += new System.EventHandler(this.pnlQuit_Click);
             // 
             // pnlSubjectList
             // 
@@ -168,6 +169,7 @@
             this.pnlSubjectList.Name = "pnlSubjectList";
             this.pnlSubjectList.Size = new System.Drawing.Size(200, 119);
             this.pnlSubjectList.TabIndex = 15;
+            this.pnlSubjectList.Click += new System.EventHandler(this.pnlSubjectList_Click);
             // 
             // label8
             // 
@@ -191,6 +193,7 @@
             this.pnlNotes.Name = "pnlNotes";
             this.pnlNotes.Size = new System.Drawing.Size(200, 119);
             this.pnlNotes.TabIndex = 14;
+            this.pnlNotes.Click += new System.EventHandler(this.pnlNotes_Click);
             // 
             // pnlHelp
             // 
@@ -215,6 +218,7 @@
             this.pnlStudentLogIn.Name = "pnlStudentLogIn";
             this.pnlStudentLogIn.Size = new System.Drawing.Size(200, 119);
             this.pnlStudentLogIn.TabIndex = 12;
+            this.pnlStudentLogIn.Click += new System.EventHandler(this.pnlStudentSignIn_Click);
             // 
             // pnlNewDepartmant
             // 
@@ -227,6 +231,7 @@
             this.pnlNewDepartmant.Name = "pnlNewDepartmant";
             this.pnlNewDepartmant.Size = new System.Drawing.Size(200, 119);
             this.pnlNewDepartmant.TabIndex = 9;
+            this.pnlNewDepartmant.Click += new System.EventHandler(this.pnlNewDepartmant_Click);
             // 
             // pnlNewSubject
             // 
@@ -239,6 +244,7 @@
             this.pnlNewSubject.Name = "pnlNewSubject";
             this.pnlNewSubject.Size = new System.Drawing.Size(200, 119);
             this.pnlNewSubject.TabIndex = 11;
+            this.pnlNewSubject.Click += new System.EventHandler(this.pnlNewSubject_Click);
             // 
             // pnlStudent
             // 
@@ -251,6 +257,7 @@
             this.pnlStudent.Name = "pnlStudent";
             this.pnlStudent.Size = new System.Drawing.Size(200, 119);
             this.pnlStudent.TabIndex = 10;
+            this.pnlStudent.Click += new System.EventHandler(this.pnlStudent_Click);
             // 
             // pnlDepartmant
             // 
@@ -263,6 +270,7 @@
             this.pnlDepartmant.Name = "pnlDepartmant";
             this.pnlDepartmant.Size = new System.Drawing.Size(200, 119);
             this.pnlDepartmant.TabIndex = 8;
+            this.pnlDepartmant.Click += new System.EventHandler(this.pnlDepartmant_Click);
             // 
             // FrmMaps
             // 
@@ -285,6 +293,7 @@
             this.Name = "FrmMaps";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMaps";
+    
             this.pnlQuit.ResumeLayout(false);
             this.pnlQuit.PerformLayout();
             this.pnlSubjectList.ResumeLayout(false);
